@@ -15,16 +15,22 @@
     "@truffle/hdwallet-provider": "^1.1.1",
     "eth-gas-reporter": "^0.2.19",
     "hardhat": "^2.0.2",
+    "inquirer": "^7.3.3",
     "solidity-coverage": "^0.7.11",
     "web3": "^1.3.0"
   },
   "scripts": {
-    "build": "npx npm run compile",
-    "tcompile": "npx truffle compile",
-    "compile": "npx hardhat compile",
+    "compile": "npx truffle compile",
+    "hcompile": "npx hardhat compile",
+    "ganache": "ganache-cli -e 10000",
+    "migrate": "node scripts/migrate.js",
+    "network": "node scripts/network.js",
+    "mocha": "mocha --exit --recursive",
+    "build": "npx npm run compile", 
     "coverage": "npx truffle run coverage",
+    "test": "node scripts/test.js",
     "gas": "npx truffle test",
-    "test": "npx hardhat test",
+    "htest": "npx hardhat test",
     "clean": "npx hardhat clean"
   },
   "repository": {
