@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: Apache-2.0
+// Copyright 2020 Swap.Pet@pm.me
 const { expect } = require("chai")
  
 const SwapPetOracle = artifacts.require('SwapPetOracle') 
