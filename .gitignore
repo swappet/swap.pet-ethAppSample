@@ -102,3 +102,14 @@ dist
 
 # TernJS port file
 .tern-port
+
+# truffle 
+.mnemonic
+.infuraKey
+.etherscan  
+.secret
+
+#Hardhat files
+cache
+artifacts
+build
