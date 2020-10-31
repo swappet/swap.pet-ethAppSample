@@ -24,8 +24,8 @@
   },
   "scripts": {
     "ganache": "ganache-cli -e 10000",
-    "htest": "npx hardhat test",
     "test": "node scripts/test.js",
+    "htest": "npx hardhat test",
     "gas": "npx truffle test",
     "coverage": "npx truffle run coverage",
     "compile": "npx truffle compile",
