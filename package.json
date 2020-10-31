@@ -14,6 +14,7 @@
     "@openzeppelin/test-environment": "^0.1.6",
     "@openzeppelin/test-helpers": "^0.5.9",
     "@truffle/hdwallet-provider": "^1.1.1",
+    "bip39": "^3.0.2",
     "eth-gas-reporter": "^0.2.19",
     "hardhat": "^2.0.2",
     "inquirer": "^7.3.3",
