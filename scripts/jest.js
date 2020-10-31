@@ -7,13 +7,15 @@ require("dotenv").config();
 var inquirer = require('inquirer');
 const ganache = require("ganache-core");
 const { spawn } = require("child_process"); 
+const { ethers } = require("ethers")
 
-const infuraKey = fs.readFileSync(path.resolve(__dirname, '.infuraKey')).toString().trim(); 
+//const infuraKey = fs.readFileSync(path.resolve(__dirname, '.infuraKey')).toString().trim(); 
+const infuraKey = fs.readFileSync(path.resolve(__dirname, '../.infuraKey')).toString().trim(); 
 const mainetURL = `https://mainnet.infura.io/v3/${infuraKey}`
 const testDir = 'test/';
 
 const forkChain = () => {
-  const PORT = 8545;
+  const PORT = 8548;
   const server = ganache.server({
     port: PORT,
     fork: mainetURL,
@@ -76,18 +78,19 @@ const forkChain = () => {
     });
   };
 
-  return { start, stop };
+  return { serverListen, serverClose };
 };
 
 const runJest = async () => {
-  await new Promise((resolve) => {
-    const files = await getFiles(testDir);
-    const answers = await inquirer.prompt([{
+  const files = await getFiles(testDir);
+  const answers = await inquirer.prompt([{
       type: 'list',
       name: 'step1',
       message: 'select test tasks',
       choices: files,
-    }]);
+  }]);
+  
+  await new Promise((resolve) => {
     let argv=["jest"];
     let note="jest "; 
     if(answers.step1 !== 'all'){
@@ -121,6 +124,6 @@ const getFiles = async (path) => {
 }
 module.exports = {
   forkChain,
-  runTests,
+  runJest,
   getFiles,
 };

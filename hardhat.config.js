@@ -3,7 +3,7 @@
  */ 
 require('@nomiclabs/hardhat-truffle5'); 
 require("@nomiclabs/hardhat-web3");
-require("@nomiclabs/buidler-ethers");
+//require("@nomiclabs/buidler-ethers");
 require('solidity-coverage'); 
 require('eth-gas-reporter');
 
