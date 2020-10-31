@@ -29,6 +29,14 @@ task("balance", "Prints an account's balance")
 
     console.log(web3.utils.fromWei(balance, "ether"), "ETH");
   });
+
+const { forkedChain, runTests } = require("./scripts/forktest");
+task("forktest", "Runs tests via fork network", async () => {
+  const { start, stop } = forkedChain();
+  await start();
+  await runTests();
+  await stop();
+});
 // You have to export an object to set up your config
 // This object can have the following optional entries:
 // defaultNetwork, networks, solc, and paths.
