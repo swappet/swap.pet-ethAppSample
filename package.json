@@ -15,9 +15,13 @@
     "@openzeppelin/test-helpers": "^0.5.9",
     "@truffle/hdwallet-provider": "^1.1.1",
     "bip39": "^3.0.2",
+    "dotenv": "^8.2.0",
     "eth-gas-reporter": "^0.2.19",
+    "ethers": "^5.0.19",
+    "ganache-core": "^2.13.1",
     "hardhat": "^2.0.2",
     "inquirer": "^7.3.3",
+    "jest": "^26.6.1",
     "mocha": "^8.2.0",
     "solidity-coverage": "^0.7.11",
     "swap.pet-lib": "^4.0.3",
@@ -60,8 +64,8 @@
   },
   "homepage": "https://github.com/swappet/swap.pet-ethAppSample#readme",
   "jest": {
-    "testMatch": [ 
-      "<rootDir>/test/*.+(spec|test).+(ts|tsx|js)" 
+    "testMatch": [
+      "<rootDir>/test/*.+(spec|test).+(ts|tsx|js)"
     ]
   }
 }
