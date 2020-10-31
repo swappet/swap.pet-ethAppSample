@@ -109,6 +109,9 @@ dist
 .etherscan  
 .secret
 
+# dotenv
+.env
+
 #Hardhat files
 cache
 artifacts

@@ -3,8 +3,9 @@
  */ 
 require('@nomiclabs/hardhat-truffle5'); 
 require("@nomiclabs/hardhat-web3");
+require("@nomiclabs/buidler-ethers");
 require('solidity-coverage'); 
-require('eth-gas-reporter');  
+require('eth-gas-reporter');
 
 const fs = require('fs');
 const path = require('path'); 
@@ -29,6 +30,14 @@ task("balance", "Prints an account's balance")
 
     console.log(web3.utils.fromWei(balance, "ether"), "ETH");
   }); 
+
+const { forkChain, runJest } = require("./scripts/jest");
+task("jest", "Runs tests in parallel on Ganache fork Mainnet", async () => {
+  const { serverListen, serverClose } = forkChain();
+  await serverListen();
+  await runJest();
+  await serverClose();
+});
 // You have to export an object to set up your config
 // This object can have the following optional entries:
 // defaultNetwork, networks, solc, and paths.
