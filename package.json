@@ -1,6 +1,6 @@
 {
   "name": "swap-pet-eth-app-sample",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "description": "Swap.Pet app sample of etherum, support truffle, hardhat, coverage,gas report",
   "main": "truffle-config.js",
   "directories": {
