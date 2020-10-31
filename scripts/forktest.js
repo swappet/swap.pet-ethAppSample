@@ -3,6 +3,8 @@
 // scripts/forktest.js 
 const ganache = require("ganache-core");
 const { spawn } = require("child_process");
+require('@nomiclabs/hardhat-truffle5'); 
+require("@nomiclabs/hardhat-web3");
 
 const forkedChain = () => {
   const PORT = 8545;
