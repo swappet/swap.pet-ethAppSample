@@ -31,3 +31,7 @@ account balance:`$ npx hardhat balance --account 0xFABB0ac...`
 # fork Mainnet with ganache-cli 
 To fork off Mainnet, simply invoke the -f flag on ganache-cli. The -i flag indicates a network ID of 1.
 `npx ganache-cli -f https://mainnet.infura.io/v3/{key} -i 1`
+
+This will spawn a Ganache instance at http://localhost:8545. This Infura API key is obtained publicly from https://infura.io. 
+
+**NOTE**:Unfortunately have to restart ganache-cli every 128 blocks (~30 minutes), otherwise you may be greeted with the following message from Infura:`Returned error: project ID does not have access to archive state`
