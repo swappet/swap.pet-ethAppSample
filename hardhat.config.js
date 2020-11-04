@@ -4,12 +4,13 @@
 require('@nomiclabs/hardhat-truffle5'); 
 require("@nomiclabs/hardhat-web3");
 require('solidity-coverage'); 
-require('eth-gas-reporter');
+require('eth-gas-reporter');  
 
 const fs = require('fs');
 const path = require('path'); 
 const infuraKey = fs.readFileSync(path.resolve(__dirname, '.infuraKey')).toString().trim(); 
 const mnemonic = fs.readFileSync(path.resolve(__dirname, '.secret')).toString().trim()
+
 
 // The next line is part of the sample project, you don't need it in your
 // project. It imports a Hardhat task definition, that can be used for
@@ -28,7 +29,7 @@ task("balance", "Prints an account's balance")
     const balance = await web3.eth.getBalance(account);
 
     console.log(web3.utils.fromWei(balance, "ether"), "ETH");
-  });
+  });  
 
 // You have to export an object to set up your config
 // This object can have the following optional entries:
@@ -94,3 +95,4 @@ module.exports = {
     artifacts: './artifacts',
   },
 };
+
