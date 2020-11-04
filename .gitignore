@@ -103,16 +103,22 @@ dist
 # TernJS port file
 .tern-port
 
+# openzeppelin
+.openzeppelin/.session
+.openzeppelin/dev-*.json
+.openzeppelin/unknown-*.json
+build/
+
 # truffle 
+.secret  
 .mnemonic
 .infuraKey
-.etherscan  
-.secret
-
-# dotenv
-.env
+.etherscan   
 
 #Hardhat files
 cache
 artifacts
 build
+dist 
+.temp_*
+

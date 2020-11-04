@@ -27,7 +27,7 @@
     "swap.pet-lib": "^4.0.6",
     "web3": "^1.3.0"
   },
-  "scripts": {
+  "scripts": { 
     "ganache": "ganache-cli -e 10000",
     "test": "node scripts/test.js",
     "htest": "npx hardhat test",
@@ -38,8 +38,10 @@
     "migrate": "node scripts/migrate.js",
     "network": "node scripts/network.js",
     "mocha": "mocha --exit --recursive",
-    "build": "npx npm run compile",
-    "clean": "npx hardhat clean"
+    "build": "npx npm run compile", 
+    "clean": "npx hardhat clean",
+    "mfork": "npx node scripts/forkMainnet.js",
+    "tfork": "npx node scripts/testOnForkMainnet.js"
   },
   "repository": {
     "type": "git",
