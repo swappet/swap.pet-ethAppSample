@@ -1,3 +1,3 @@
 module.exports = {
-  skipFiles: ['Migrations.sol','interfaces/ISwapPetOracle.sol']
+  skipFiles: ['Migrations.sol','mocks','interfaces','SafeNamer']
 };
