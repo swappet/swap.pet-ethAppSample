@@ -32,8 +32,8 @@ edit setting file:
 ```
 $ npx npm update swap.pet-lib swap.pet-sdk 
 ```
-swap.pet-lib:for solidity
-swap.pet-sdk:for solidity and js
+swap.pet-lib:for solidity  
+swap.pet-sdk:for solidity and js  
  
 # fork Mainnet with ganache-cli 
 To fork off Mainnet, simply invoke the -f flag on ganache-cli. The -i flag indicates a network ID of 1.
